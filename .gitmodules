@@ -1,3 +1,0 @@
-[submodule "libfaketime"]
-	path = libfaketime
-	url = https://github.com/wolfcw/libfaketime
