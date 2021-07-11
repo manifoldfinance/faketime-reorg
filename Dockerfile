@@ -1,4 +1,4 @@
-FROM openethereum/openethereum:v3.2.2-rc.1 AS faketime
+FROM openethereum/openethereum:v3.2.6 AS faketime
 USER root
 RUN apk add --update --no-cache \
        ca-certificates \
@@ -12,7 +12,7 @@ WORKDIR /libfaketime
 RUN make && make install
 
 
-FROM openethereum/openethereum:v3.2.2-rc.1
+FROM openethereum/openethereum:v3.2.6
 
 WORKDIR /
 COPY --from=faketime /usr/local/lib/faketime/libfaketimeMT.so.1 /lib/faketime.so
